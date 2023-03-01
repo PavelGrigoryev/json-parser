@@ -1,6 +1,7 @@
 package ru.clevertec.jsonparser.service;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
 
 import java.lang.reflect.Array;
 import java.lang.reflect.Field;
@@ -8,6 +9,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 @Slf4j
+@Service
 public class ToJsonService {
 
     public String toJson(Object object) {
@@ -40,7 +42,7 @@ public class ToJsonService {
                 .collect(Collectors.joining("", "{", "}"));
 
         String finalJson = removeLastComma(json);
-        log.info(finalJson);
+        log.info("toJson:\n{}", finalJson);
         return finalJson;
     }
 

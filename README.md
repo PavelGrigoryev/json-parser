@@ -2,7 +2,7 @@
 
 ***
 
-### This app can parse java to json
+### This app can parse java object to json and json to java object
 
 ***
 
